@@ -1,40 +1,55 @@
-# courseInfo
+class Car:
+    def __init__(self, __year, __make, __model, __speed):
+        self.__year = __year
+        self.__make = __make
+        self.__model = __model
+        self.__speed = __speed
+
+    def setYear(self, __year):
+        self.__year = __year
+
+    def getYear(self):
+        return self.__year
+
+    def setMake(self, __make):
+        self.__make = __make
+
+    def getMake(self):
+        return self.__make
+
+    def setModel(self, __model):
+        self.__model = __model
+
+    def getModel(self):
+        return self.__model
+
+    def setSpeed(self, __speed):
+        self.__speed = __speed
+
+    def getSpeed(self):
+        return self.__speed
+
+    def accelerate(self):
+        if (self.__speed > 120):
+            print("Speed exceed 120")
+        else:
+            self.__speed += 5
+
+    def Break(self, __speed):
+        if (self.__speed < 0):
+            print("Speed is below O")
+        else:
+            self.__speed -= 5
+
+    def getSpeed(self, __speed):
+        return self.__speed
 
 
-# assign a variable for the dictionary course and room number
-course_room= {'CS101': 3004, 'CS102': 4501, 'CS103': 6755, 'NT110': 1244, 'CM241': 1411}
-course_instructor= {'CS101': 'Haynes', 'CS102': 'Alvaraldo', 'CS103': 'Rich', 'NT110': 'Burke', 'CM241': 'Lee'}
-course_meeting= {'CS101': '8:00am', 'CS102': '9:00am', 'CS103': '10:00am', 'NT110': '11:00am', 'CM241': '11:00pm'}
-
-
-for key in course_room:
-    print('Course :', course_room.keys())
-
-    user_input = input('Enter a course number to display')
-    print(user_input)
-    print('Room:', course_room.get(user_input))
-    print('Instructor: ', course_instructor.get(user_input))
-    print('Meeting: ', course_meeting.get(user_input))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+vehicle = Car(2000, 'Ford', 'C50', 5)
+# Let's call the accelerate method five times
+vehicle.accelerate()
+print("The speed ", vehicle.getSpeed)
+vehicle.accelerate()
+vehicle.accelerate()
+vehicle.accelerate()
+vehicle.accelerate()
